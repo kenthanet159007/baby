@@ -1,5 +1,6 @@
-import { Gift, Heart, Sparkles, WandSparkles } from "lucide-react";
+import { Heart, Sparkles, WandSparkles } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { GlassPanel } from "@/components/ui/GlassPanel";
 import { LoveButton } from "@/components/ui/LoveButton";
 
@@ -29,12 +30,16 @@ export function WelcomeStep({
           initial={{ scale: 0.78, rotate: -8 }}
           animate={{ y: [0, -10, 0], rotate: [-2, 2, -2], scale: 1 }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          className="gift-box hero-gift mx-auto mb-7 grid h-32 w-32 place-items-center rounded-[38px] bg-gradient-to-br from-pink-200 via-rose-300 to-fuchsia-300 text-white shadow-[0_30px_80px_rgba(244,114,182,.55)]"
+          className="hero-gift mx-auto mb-7 grid h-36 w-36 place-items-center overflow-hidden rounded-[38px] bg-white/45 shadow-[0_30px_80px_rgba(244,114,182,.38)]"
         >
-          <span className="gift-lid" />
-          <span className="gift-ribbon-x" />
-          <span className="gift-ribbon-y" />
-          <Gift size={52} />
+          <Image
+            src="/images/S__51822624.svg"
+            alt="รูปความทรงจำพิเศษ"
+            width={144}
+            height={144}
+            unoptimized
+            className="h-full w-full object-cover"
+          />
         </motion.div>
 
         <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/65 px-3 py-1 text-xs font-black text-rose-400 shadow-sm backdrop-blur">
